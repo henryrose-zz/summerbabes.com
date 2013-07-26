@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
+
+    <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+
+      <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <div class="wrap">
+        <h1>Summer<br>Babes</h1>
+
+    </div>
   </body>
 </html>
