@@ -25,6 +25,21 @@ body .wrap h1 {
     opacity: 1;
   }
 }
+body .wrap .next-show {
+  width: 600px;
+  background: #fff;
+  color: #999;
+  text-align: center;
+  margin: 0 auto;
+  padding: 24px 12px;
+  opacity: .5;
+}
+body .wrap .next-show ul {
+  list-style-type: none;
+}
+body .wrap .next-show ul li {
+  margin: 0;
+}
 a {
   color: #00B7FF;
 }

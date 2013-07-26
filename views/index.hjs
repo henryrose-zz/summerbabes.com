@@ -12,6 +12,13 @@
     <div class="wrap">
         <h1>Summer<br>Babes</h1>
 
+        <div class="next-show">
+            <p>Up Next: {{ next_gig.venue }}</p>
+            <ul>
+                <li>{{ next_gig.time }}</li>
+                <li>{{ next_gig.cover }}</li>
+            </ul>
+        </div>
     </div>
   </body>
 </html>
