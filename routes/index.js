@@ -4,16 +4,23 @@
  */
 
 exports.index = function(req, res){
-  res.render(
-      'index',
+
+  res.locals = {
+      title: 'Summer Babes',
+      next_gig : {
+          venue : "Darrell's Tavern (Shorline)",
+          venue_url : "http://www.darrellstavern.com/",
+          date : 'Friday July 26th',
+          time: '9pm',
+          cover: '$5'
+      }
+  };
+
+  return res.render(
+      'layout',
       {
-          title: 'Summer Babes',
-          next_gig : {
-              venue : "Darrell's Tavern (Shorline)",
-              venue_url : "http://www.darrellstavern.com/",
-              date : 'Friday July 26th',
-              time: '9pm',
-              cover: '$5'
+          partials : {
+              part : 'index'
           }
       }
   );

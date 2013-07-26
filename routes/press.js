@@ -4,9 +4,12 @@
 
 exports.press_route = function (req, res) {
     res.render(
-        'press',
-        {
-
+        'layout',
+         {
+            partials : {
+                part : 'press'
+            }
         }
+
     );
 };
