@@ -9,7 +9,8 @@ exports.index = function(req, res){
       {
           title: 'Summer Babes',
           next_gig : {
-              venue : 'Darells',
+              venue : "Darrell's Tavern (Shorline)",
+              venue_url : "http://www.darrellstavern.com/",
               date : 'Friday July 26th',
               time: '9pm',
               cover: '$5'

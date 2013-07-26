@@ -1,13 +1,41 @@
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
 body {
   color: #fff;
   margin: 0;
   background: #000;
 
   .wrap {
-    min-height:1000px;
+    min-height:1400px;
     width: 100%;
 
-    background: url('/images/background.jpg') ;
+    background: url('/images/background.jpg') center ;
     background-size: cover;
 
     padding-top: 100px;
@@ -29,21 +57,54 @@ body {
       }
     }
 
-    .next-show {
+    .module{
       width: 600px;
       background: #fff;
       color: #999;
-      text-align: center;
-      margin: 0 auto;
-      padding: 24px 12px;
-      opacity: .5;
+
+      padding: 12px 48px 24px 48px;
+
+      margin: 24px auto 0 auto;
+
+      -webkit-animation: fade-in 4s;
+
+      font-size : 12px;
+
+
+      &:first-of-type{
+        margin-top: 0;
+      }
+
+      h2{
+        font-family: 'Codystar', cursive;
+        color: #222222;
+        font-size: 3.5em;
+      }
+
       ul{
         list-style-type: none;
+        padding-left: 0;
         li{
           margin: 0;
+          &.date {
+            font-weight: bold;
+          }
+
         }
       }
     }
+
+    .sounds {
+      iframe{
+        float: left;
+      }
+
+      iframe:last-of-type{
+        float: right;
+      }
+
+    }
+
   }
 }
 
